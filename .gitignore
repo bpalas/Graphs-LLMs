@@ -1,0 +1,5 @@
+# Ignorar archivos que contienen claves API y archivos randes
+
+.env
+base
+Batch_results_V0
