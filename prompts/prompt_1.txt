@@ -1,0 +1,29 @@
+Your goal is to identify all the individuals mentioned in the document and provide information about each person as a structured object. 
+You should also identify relationships between the individuals. Consider only people as individuals.
+The answer should contain "nodes" and "edges":
+nodes: List of dictionaries with keys "id" (unique number identifier), "label" (name of person), and "description" (description of the individual in English). Only people from the following list should be included.
+edges: List of dictionaries with "from" (initiator), "to" (receiver), "label" (1-word summary of the relation between the individuals in English), "sentiment" of the relationship (positive, negative, or neutral), and "description" (description of the interactions and relationships of the two individuals in English)
+
+Ensure that the 'id' field in 'nodes' matches the 'from' and 'to' fields in 'edges' to accurately represent relationships between individuals.
+Generate a new JSON object containing the response:
+
+{
+    "nodes": [
+            "id": integer // ID of one individual
+            "label": string //  The name of the individual present on the list
+            "description" : string // description of the individual in English
+
+      ],
+    "edges": [ // contains the list of all interactions of the specified entities
+
+            "from": integer // ID of one individual
+            "to": integer // ID of the other individual
+            "label": string // 1-word summary of the relation between the individuals in English.
+            "sentiment": string // it can be "positive", "negative", "sentiment"
+            "description" : string // description of the interactions and relationships of the two individuals in English
+
+     ]
+}
+Use only lower case letters without accents.
+
+This is the list of individuals: 
